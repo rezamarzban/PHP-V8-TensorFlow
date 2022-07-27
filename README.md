@@ -10,6 +10,6 @@ Or run below commands after cloning this repository into your working directory:
 
 "php model.php"
 
-Running at Ubuntu 18.04 with PHP 7.x and php-V8 extension 0.2.2 (V8 engine 6.6.313):
+Running at Ubuntu 18.04 with installed PHP 7.x and php-V8 extension 0.2.2 (V8 engine 6.6.313):
 
-
+![Image1]()
