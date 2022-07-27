@@ -1,6 +1,6 @@
 <?php
 
-function insert($jsfile){
+function insertScript($jsfile){
 return file_get_contents($jsfile);
 }
 
@@ -15,7 +15,7 @@ console.log = function () {};
 console.warn = function () {};
 console.error = function () {};
  
-".insert("tensorflow.js")." 
+".insertScript("tensorflow.js")." 
 
 const model = tf.sequential();
 model.add(tf.layers.conv2d({filters: 16, kernelSize: [3, 3], activation: 'relu', padding: 'same', inputShape: [28, 28, 1]}));
