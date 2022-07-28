@@ -12,10 +12,7 @@ use V8\{
     StartupData,
 };
 
-$isolate = new Isolate();
-$context = new Context($isolate);
-
-$source = new StringValue($isolate, " 
+$script_source_string = "
 window = this;
 
 var console =  {};
@@ -33,7 +30,12 @@ model.add(tf.layers.dense({units: 32, activation: 'relu'}));
 model.add(tf.layers.dense({units: 10, activation: 'softmax'}));
 model.summary();
 model.compile({optimizer: 'adam', loss: 'categoricalCrossentropy', metrics: ['accuracy'], });
- 'Hello Tensorflow! Model is created ...' ");
+ 'Hello Tensorflow! Model is created ...' "
+
+$isolate = new Isolate();
+$context = new Context($isolate);
+
+$source = new StringValue($isolate, $script_source_string);
 
 $script = new Script($context, $source);
 
