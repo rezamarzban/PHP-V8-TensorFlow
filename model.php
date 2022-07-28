@@ -32,3 +32,11 @@ $script = new \V8\Script($context, $source);
 $result = $script->run($context);
 echo $result->value(), PHP_EOL;
 ?>
+
+/*
+*
+* @author Reza Marzban
+*
+* GitHub.com/marzban2030/PHP-V8-TensorFlow
+*
+*/
