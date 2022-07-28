@@ -59,7 +59,7 @@ echo $result->value(), PHP_EOL;
 *
 * @author Reza Marzban
 *
-* Ver 0.1.01
+* Ver 0.1.01 Beta
 *
 * GitHub.com/marzban2030/PHP-V8-TensorFlow
 *
