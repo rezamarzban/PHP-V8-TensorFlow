@@ -29,7 +29,7 @@ model.add(tf.layers.dense({units: 32, activation: 'relu'}));
 model.add(tf.layers.dense({units: 10, activation: 'softmax'}));
 model.summary();
 model.compile({optimizer: 'adam', loss: 'categoricalCrossentropy', metrics: ['accuracy'], });
- 'Hello Tensorflow! Model is created ...'";
+ 'Hello Tensorflow! Neural Network Model is created in the server side.'";
 
 $isolate = new Isolate();
 $context = new Context($isolate);
