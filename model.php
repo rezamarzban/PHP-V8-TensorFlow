@@ -1,13 +1,21 @@
 <?php
 
 function insertScriptFromFile($jsfile){
-return file_get_contents($jsfile);
+    return file_get_contents($jsfile);
 }
 
-$isolate = new \V8\Isolate();
-$context = new \V8\Context($isolate);
+use V8\{
+    Isolate,
+    Context,
+    StringValue,
+    ScriptCompiler,
+    StartupData,
+};
 
-$source = new \V8\StringValue($isolate, " 
+$isolate = new Isolate();
+$context = new Context($isolate);
+
+$source = new StringValue($isolate, " 
 window = this;
 
 var console =  {};
@@ -27,7 +35,7 @@ model.summary();
 model.compile({optimizer: 'adam', loss: 'categoricalCrossentropy', metrics: ['accuracy'], });
  'Hello Tensorflow! Model is created ...' ");
 
-$script = new \V8\Script($context, $source);
+$script = new Script($context, $source);
 
 $result = $script->run($context);
 echo $result->value(), PHP_EOL;
