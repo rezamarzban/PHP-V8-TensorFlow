@@ -37,6 +37,8 @@ echo $result->value(), PHP_EOL;
 *
 * @author Reza Marzban
 *
+* Ver 0.1.00
+*
 * GitHub.com/marzban2030/PHP-V8-TensorFlow
 *
 */
