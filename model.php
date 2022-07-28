@@ -8,8 +8,7 @@ use V8\{
     Isolate,
     Context,
     StringValue,
-    ScriptCompiler,
-    StartupData,
+    Script,
 };
 
 $script_source_string = "
@@ -34,9 +33,7 @@ model.compile({optimizer: 'adam', loss: 'categoricalCrossentropy', metrics: ['ac
 
 $isolate = new Isolate();
 $context = new Context($isolate);
-
 $source = new StringValue($isolate, $script_source_string);
-
 $script = new Script($context, $source);
 
 $result = $script->run($context);
