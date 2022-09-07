@@ -19,7 +19,7 @@ console.log = function () {};
 console.warn = function () {};
 console.error = function () {};
  
-".insertScriptFromFile("tensorflow.js")." 
+".insertScriptFromFile("https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest")." 
 
 const model = tf.sequential();
 model.add(tf.layers.conv2d({filters: 16, kernelSize: [3, 3], activation: 'relu', padding: 'same', inputShape: [28, 28, 1]}));
